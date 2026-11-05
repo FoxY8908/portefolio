@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>codemade.byus – sites, bots Discord, jeux et visuels</title>
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.className+=" anim";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--top:#FFE4ED;--bot:#C9F0E7;--ink:#0A1A33;--mut:#3F5068;--aq:#0B8F78;--pk:#F4A9C6;--on:#061226;--line:rgba(10,26,51,.2);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--top:#0F5E59;--bot:#040A1C;--ink:#EAF7F4;--mut:#B3CBCF;--aq:#43E8C0;--pk:#F9C9DB;--line:rgba(234,247,244,.24);color-scheme:dark}}
+:root[data-theme="dark"]{--top:#0F5E59;--bot:#040A1C;--ink:#EAF7F4;--mut:#B3CBCF;--aq:#43E8C0;--pk:#F9C9DB;--line:rgba(234,247,244,.24);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:400 1.0625rem/1.6 "Instrument Sans",system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--top),var(--bot)) no-repeat var(--bot)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--pk);outline-offset:3px}
+h1,h2,h3{font-family:Unbounded,"Arial Black",system-ui,sans-serif;margin:0;line-height:1.05}
+.top{padding:1.5rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-weight:600}
+.top nav{display:flex;gap:1.5rem}
+.top a{text-decoration:none}
+.top a:hover{text-decoration:underline;text-underline-offset:5px}
+.hero{padding:clamp(3rem,10vw,7rem) 0 clamp(4rem,10vw,8rem)}
+h1{font-weight:800;font-size:clamp(2.4rem,13vw,10rem);letter-spacing:-.04em}
+h1 span{display:block;color:var(--pk)}
+.lead{max-width:34rem;margin:2rem 0;font-size:1.25rem}
+.row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;background:var(--pk);color:var(--on)}
+.btn.alt{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+.dispo{display:inline-flex;gap:.6rem;align-items:center;border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem;font-size:.95rem;margin-bottom:2rem}
+.dispo::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--aq)}
+section{padding:clamp(3rem,8vw,6rem) 0}
+h2{font-weight:700;font-size:clamp(1.6rem,4.5vw,2.8rem);letter-spacing:-.02em;margin-bottom:2.5rem}
+.item{display:grid;grid-template-columns:5.5rem 1fr;gap:1.25rem 1.5rem;padding:1.75rem 0;border-top:1px solid var(--line)}
+.item:last-child{border-bottom:1px solid var(--line)}
+.tile{width:5.5rem;height:5.5rem;display:grid;place-items:center;font:800 1.2rem Unbounded,sans-serif;color:var(--on);background:var(--aq)}
+.t1{border-radius:0 50% 50% 50%}.t2{border-radius:50%;background:var(--pk)}.t3{border-radius:1.2rem}.t4{border-radius:999px 999px 0 0;background:var(--pk)}
+.item h3{font-size:1.2rem;margin-bottom:.5rem}
+.item p{margin:0;color:var(--mut);max-width:36rem}
+.svc{grid-template-columns:1fr}
+@media(min-width:760px){.item{grid-template-columns:5.5rem 1fr 1.2fr}.item h3{margin:0}.svc{grid-template-columns:1fr 1.2fr}}
+.about{max-width:40rem;font-size:1.2rem}
+.about p{margin:0 0 1.2rem}
+.mail{display:inline-block;font:800 clamp(1.5rem,6.5vw,4rem)/1.1 Unbounded,sans-serif;color:var(--aq);text-underline-offset:.15em;margin:.5rem 0 1.5rem;word-break:break-word}
+footer{padding:2rem 0 5rem;color:var(--mut);font-size:.95rem}
+#depth{position:fixed;right:max(1rem,env(safe-area-inset-right,0px));bottom:calc(1rem + env(safe-area-inset-bottom,0px));font:600 .85rem Unbounded,sans-serif;background:var(--bot);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;pointer-events:none}
+.anim :where(.hero>*,section h2,.item,.about p,.mail,#contact p,#services>p,h1 span){opacity:0;transform:translateX(-4rem);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.anim :where(.item:nth-child(odd),.mail,h1 span){transform:translateX(4rem)}
+.anim .in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a href="#haut">codemade.byus</a><nav><a href="#projets">Projets</a><a href="#services">Services</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav></header>
+
+<div class="hero" id="haut">
+<p class="dispo">Disponible pour de nouveaux projets</p>
+<h1>codemade<span>.byus</span></h1>
+<p class="lead">Je crée des sites, des bots Discord, des jeux et des visuels pour des créateurs et leurs communautés.</p>
+<div class="row"><a class="btn" href="https://www.instagram.com/veltomarketplace/">Me contacter sur Instagram</a><a class="btn alt" href="#projets">Voir les projets</a></div>
+</div>
+
+<section id="projets">
+<h2>Projets</h2>
+<div class="item"><div class="tile t1">{ }</div><h3>Site pour un serveur Minecraft</h3><p>Pages d’accueil, vote, boutique et lien Discord, en Java et Bedrock, aux couleurs du serveur.</p></div>
+<div class="item"><div class="tile t2">bot</div><h3>Bot Discord de tickets et de modération</h3><p>Un bot qui ouvre des tickets, trie les demandes et garde le serveur propre.</p></div>
+<div class="item"><div class="tile t3">&lt;/&gt;</div><h3>ToolCopilot</h3><p>Un outil qui génère un portfolio de développeur : aperçu en direct, puis export en HTML.</p></div>
+<div class="item"><div class="tile t4">▶</div><h3>Reels et visuels</h3><p>Courtes vidéos verticales calées sur la musique, sans texte à l’écran, et premiers visuels pour des streamers.</p></div>
+</section>
+
+<section id="services">
+<h2>Services et tarifs</h2>
+<div class="item svc"><h3>Site web</h3><p>Une page ou un site complet, lisible sur mobile et aux couleurs de ton univers.</p></div>
+<div class="item svc"><h3>Bot Discord</h3><p>Tickets, modération, commandes sur mesure pour ton serveur.</p></div>
+<div class="item svc"><h3>Jeu</h3><p>Un jeu simple, de l’idée à la mise en ligne.</p></div>
+<div class="item svc"><h3>Visuels et reels</h3><p>Je débute en graphisme : prix doux, et beaucoup de soin dans les détails.</p></div>
+<p style="margin-top:1.5rem;max-width:36rem">Chaque projet a son prix. Dis-moi ce que tu veux faire et pour quand, je te réponds avec un devis.</p>
+</section>
+
+<section id="apropos">
+<h2>À propos</h2>
+<div class="about">
+<p>Je fais du freelance et je construis ma propre startup en parallèle.</p>
+<p>J’aime les projets où il y a un peu de tout : du code, un univers visuel et une communauté au bout. Chaque projet m’apprend quelque chose, et je préfère un résultat simple et net à un effet de plus.</p>
+<p>Je suis aussi ouvert aux collaborations et aux offres sur la durée.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<a class="mail" href="https://www.instagram.com/veltomarketplace/">@veltomarketplace</a>
+<p style="max-width:34rem;margin:0">Le plus rapide : un message privé sur Instagram avec ton idée et ta date.</p>
+</section>
+
+<footer>codemade.byus, 2026</footer>
+</div>
+<div id="depth" aria-hidden="true">0 m</div>
+<script>
+(function(){
+  var d=document.getElementById("depth");
+  function u(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    var r=h>0?Math.min(1,Math.max(0,window.scrollY/h)):0;
+    d.textContent=Math.round(r*40)+" m";
+  }
+  window.addEventListener("scroll",u,{passive:true});
+  window.addEventListener("resize",u);
+  u();
+  var root=document.documentElement;
+  if(root.classList.contains("anim")&&"IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});
+    },{threshold:.12,rootMargin:"0px 0px -6% 0px"});
+    document.querySelectorAll(".hero>*,.about p").forEach(function(el,i){el.style.transitionDelay=((i%4)*120)+"ms";});
+    var sp=document.querySelector("h1 span");
+    if(sp)sp.style.transitionDelay="500ms";
+    document.querySelectorAll(".hero>*,h1 span,section h2,.item,.about p,.mail,#contact p,#services>p").forEach(function(el){io.observe(el);});
+  }else{root.classList.remove("anim");}
+})();
+</script>
+</body>
+</html>
